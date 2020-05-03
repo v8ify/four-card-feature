@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 80px 30px;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.top-content {
+  padding: 0 5px;
+}
+
+.top-content .sub-heading {
+  font-size: 22px;
+  font-weight: 200;
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+}
+
+.top-content .heading {
+  margin: 10px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: hsl(234, 12%, 34%);
+}
+
+.top-content .info {
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  color: hsl(229, 6%, 66%);
+}
+
+.cards {
+  margin-top: 60px;
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.card {
+  padding: 30px;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 15px 23px 1px rgba(189, 189, 201, 0.76);
+  -moz-box-shadow: 1px 15px 23px 1px rgba(189, 189, 201, 0.76);
+  box-shadow: 1px 15px 23px 1px rgba(189, 189, 201, 0.76);
+}
+
+.card .heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+
+.card .info {
+  padding: 10px 0 36px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+}
+
+.card img {
+  align-self: flex-end;
+}
+
+#superviser {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+#team-builder {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+#karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+#calculator {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding-left: 165px;
+    padding-right: 165px;
+  }
+
+  .top-content .sub-heading,
+  .top-content .heading {
+    font-size: 30px;
+  }
+
+  .top-content .info {
+    font-size: 16px;
+    width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    grid-template-columns: none;
+    grid-template-areas:
+      ". t ."
+      "s t c"
+      "s k c"
+      ". k .";
+  }
+
+  #team-builder {
+    padding-left: 45px;
+    padding-right: 45px;
+    grid-area: t;
+  }
+
+  #superviser {
+    grid-area: s;
+  }
+
+  #karma {
+    padding-left: 45px;
+    padding-right: 45px;
+    grid-area: k;
+  }
+
+  #calculator {
+    grid-area: c;
+  }
+}
